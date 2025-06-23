@@ -22,10 +22,10 @@ jobs:
 
     - name: Build Docker image with tags
       run: |
-        IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/Microsoft-Rewards-Script
+        IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/microsoft-rewards-script
         docker build . --file Dockerfile --tag $IMAGE_NAME:latest --tag $IMAGE_NAME:$(date +%s)
 
     - name: Push Docker image
       run: |
-        IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/Microsoft-Rewards-Script
+        IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/microsoft-rewards-script
         docker push $IMAGE_NAME:latest
